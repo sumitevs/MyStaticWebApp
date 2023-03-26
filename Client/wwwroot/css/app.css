@@ -8,8 +8,13 @@ h1:focus {
     outline: none;
 }
 
+h1{
+    color:darkgoldenrod;
+    font-family:'Berlin Sans FB'
+}
+
 a, .btn-link {
-    color: #0077cc;
+    color: antiquewhite;
 }
 
 .btn-primary {
@@ -62,3 +67,20 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.box {
+    background-image: url("../images/homeImage001.png");
+    width: 1200px;
+    height: 650px;
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.message {
+    max-width: 400px;
+    min-width: 150px;
+    color: antiquewhite;
+    font-family: 'Berlin Sans FB';
+    font-size:larger;
+}
