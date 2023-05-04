@@ -4,10 +4,10 @@
     flex-direction: column;
 }
 
-main {
+/*main {
     flex: 1;
     background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, #3F0000 100%);
-}
+}*/
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, #3F0000 100%);
@@ -36,6 +36,11 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+#mainPage {
+    padding: 2rem !important;
+    background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, #3F0000 100%) !important;
+}
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
