@@ -7,12 +7,36 @@
     </div>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+<div class="position-static @NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
+        </div>
+        <div class="nav-item px-3" @onclick:stopPropagation="true">
+            <a class="nav-link" href="#" @onclick="ToggleChapters">
+                <span class="oi oi-book" aria-hidden="true"></span> Chapters
+            </a>
+            @if (chaptersExpanded)
+            {
+                <div class="nav-item px-3">
+                    <a class="nav-link" href="#">
+                        Chapter 1
+                    </a>
+                </div>
+                <div class="nav-item px-3">
+                    <a class="nav-link" href="#">
+                        Chapter 2
+                    </a>
+                </div>
+                <div class="nav-item px-3">
+                    <a class="nav-link" href="#">
+                        Chapter 3
+                    </a>
+                </div>
+            }
+            
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
@@ -24,16 +48,23 @@
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Reach me
             </NavLink>
         </div>
+        
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
+    private bool chaptersExpanded = false;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        collapseNavMenu = !collapseNavMenu;     
+    }
+
+    private void ToggleChapters()
+    {
+        chaptersExpanded = !chaptersExpanded;
     }
 }
