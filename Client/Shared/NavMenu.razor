@@ -15,24 +15,24 @@
             </NavLink>
         </div>
         <div class="nav-item px-3" @onclick:stopPropagation="true">
-            <a class="nav-link" href="#" @onclick="ToggleChapters">
+            <a class="nav-link" @onclick="ToggleChapters">
                 <span class="oi oi-book" aria-hidden="true"></span> Chapters
             </a>
             @if (chaptersExpanded)
             {
                 <div class="nav-item px-3">
-                    <a class="nav-link" href="#">
-                        Chapter 1
+                    <a class="nav-link" href="problemstatement">
+                        Problem
                     </a>
                 </div>
                 <div class="nav-item px-3">
                     <a class="nav-link" href="#">
-                        Chapter 2
+                        Prerequisites
                     </a>
                 </div>
                 <div class="nav-item px-3">
                     <a class="nav-link" href="#">
-                        Chapter 3
+                        Solution thinking
                     </a>
                 </div>
             }

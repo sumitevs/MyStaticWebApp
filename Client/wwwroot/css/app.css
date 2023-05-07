@@ -9,7 +9,7 @@ h1:focus {
 }
 
 h1{
-    color:darkgoldenrod;
+    color:ghostwhite;
     font-family:'Berlin Sans FB'
 }
 
@@ -68,15 +68,7 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-/*.box {
-    background-image: url("../images/homeImage001.png");
-    width: 1200px;
-    height: 650px;
-    background-position: right center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-*/
+
 #messageDiv {
     color: antiquewhite;
     font-family: 'Berlin Sans FB';
