@@ -2,6 +2,6 @@
 {
     public partial class Index
     {
-        
+        string text = "Hi";
     } 
 }

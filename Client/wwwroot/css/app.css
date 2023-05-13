@@ -133,3 +133,16 @@ a, .btn-link {
     max-height: 100%;
     overflow: hidden;
 }
+
+.rz-panel-menu {
+    color: ghostwhite !important;
+    background-color: rgba(80,0,0,1) !important;
+}
+.rz-navigation-item-wrapper {
+    color: ghostwhite !important;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.rz-navigation-menu {
+    color: ghostwhite !important;
+    background-color: rgba(90,0,0,1) !important;
+}
