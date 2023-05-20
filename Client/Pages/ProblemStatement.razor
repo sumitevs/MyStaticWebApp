@@ -1,42 +1,84 @@
 ﻿@page "/problemstatement"
 
 <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-6 " id="messageDiv">
-        <h1>Problem Statement</h1>
-        <br />
-        Finding a solution is pretty much like cooking a dish. There are many ways to do it. At the core, is the main ingredient, say a chicken dish, the main ingredient is the chicken. And you could make a chicken soup, chicken kabab or chicken biriyani.
-        <br />
-        <br />
-        Likewise, in a software solution, the main ingredient is the "Problem Statement". And you can preapre a solution for it in different ways. Be it a console application, Web application or mobile application. Irrespective of the solution, the hen is dead.
-        <br />
-        <br />
-        Let us start by understanding what problem we want to solve.
-        <br />
-        <br />
-        <mark> You are going to start a restaurant. You need a software that can take in orders from a customer. It should then calulate the bill for the customer.</mark>
-        <br />
-        <br />
-        Yes, this is a vague requirement that can be broken down into a lot of details. However, let us keep it simple for now. We will start with just one customer placing an order for food and receiving the bill for their order.
-        <br />
-        <br />
-        We will find a solution for this problem first in a simple console application. 
-        The basic black screen may not be so exciting, but it is a good start.
-        <br />
-        <br />
-        Once we have that out of the way, we can advance to a WPF application that can run on a desktop, using the same underlying code as our console app.
-        <br />
-        <br />
-        Then we can explore how we can make this a web application using Blazor.
-        <br />
-        <br />
-        Finally, we will see how to create a mobile app using MAUI.
-        <br />
-        <br />
-        We just ran through a lot of .NET dreams, but let us make them happen.
-    </div>
+        <RadzenSteps Change=@OnChange>
+            <Steps>
+                <RadzenStepsItem >
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                        <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                            <RadzenImage Path="./images/mainIngredients001.png" Style="width: 35rem;" />
+                        </RadzenStack>
+                        <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                            <RadzenText TextStyle="TextStyle.Body1">
+                                Finding a solution is pretty much like cooking a dish. 
+                                There are many ways to do it. At the core, is the main ingredient. Take chicken dish for an example, the main ingredient is the chicken. 
+                                And you could make a chicken fry, chicken kabab or chicken biriyani.
+                            </RadzenText>
+                        </RadzenCard>
+                    </RadzenCard>
+                </RadzenStepsItem>
+                <RadzenStepsItem >
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                        <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                            <RadzenImage Path="./images/mainIngredients002.png" Style="width: 35rem;" />
+                        </RadzenStack>
+                        <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                            <RadzenText TextStyle="TextStyle.Body1">
+                                Likewise, in a software solution, the main ingredient is the "Problem Statement". 
+                                And you can preapre a solution for it in different ways. 
+                                Be it a console application, Web application or mobile application. Irrespective of the solution, the hen is dead.
+                            </RadzenText>
+                        </RadzenCard>
+                    </RadzenCard>
+                </RadzenStepsItem>
+                <RadzenStepsItem >
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                        <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                            <RadzenImage Path="./images/mainIngredients003.png" Style="width: 35rem;" />
+                        </RadzenStack>
+                        <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                            <RadzenText TextStyle="TextStyle.Body1">
+                                Let us start by understanding what problem we want to solve.
+                                <br />
+                                <mark> You are going to start a restaurant. You need a software that can take in orders from a customer. It should then calulate the bill for the customer.</mark>
+                                <br />
+                                <br />
+                                Yes, this is a vague requirement that can be broken down into a lot of details. However, let us keep it simple for now. We will start with just one customer placing an order for food and receiving the bill for their order.
+
+                            </RadzenText>
+                        </RadzenCard>
+                    </RadzenCard>
+                </RadzenStepsItem>
+                <RadzenStepsItem>
+                    <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                        <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                            <RadzenImage Path="./images/mainIngredients004.png" Style="width: 35rem;" />
+                        </RadzenStack>
+                        <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                            <RadzenText TextStyle="TextStyle.Body1">
+                                We will find a solution for this problem first in a simple console application.
+                                The basic black screen may not be so exciting, but it is a good start.
+                                <br />
+                                <br />
+                                Once we have that out of the way, we can advance to a WPF application that can run on a desktop, using the same underlying code as our console app.
+                                <br />
+                                <br />
+                                Then we can explore how we can make this a web application using Blazor.
+                                <br />
+                                <br />
+                                Finally, we will see how to create a mobile app using MAUI.
+                                <br />
+                                <br />
+                                We just ran through a lot of .NET dreams, but let us make them happen
+                            </RadzenText>
+                        </RadzenCard>
+                    </RadzenCard>
+                </RadzenStepsItem>
+            </Steps>
+        </RadzenSteps>
 
     <div class="col-sm-12 col-md-6 col-lg-6" id="imgContainer">
-        <img src="/images/problemstatement001.png" alt="problem statement">
+       @* <img src="/images/problemstatement001.png" alt="problem statement">*@
     </div>
 </div>
 

@@ -1,0 +1,84 @@
+﻿@page "/basics"
+
+<div class="row">
+    <br />
+    <RadzenSteps Change=@OnChange>
+        <Steps>
+            <RadzenStepsItem >
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                    <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                        <RadzenImage Path="./images/basics001.jpg" Style="width: 50rem;" />
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.Body1">
+                            <mark>Class</mark>​ where we define a layout of an object. We specify how our objects should look and behave. 
+                            So once we have a class, it is just a layout plan, or more commonly mentioned as a blueprint.​
+                            For example the class House here.
+                            <br />
+                            <br />
+                            Where as an <mark>Object</mark> is an instance of a class. It is a more real thing in some sense. It is not a plan, it is the thing in itself.​​
+                            <br />
+                            House JoeHouse = new House();​​
+                            <br />
+                            <br />
+                            Now this might look to easy. From a plan to real house, in single line, no expense at all. ​
+                            Actually there is a lot of expense behind the scene. JosHouse is taking up a lot of memory in you machine. ​
+                            It will take up space for the living rooms, the dining rooms etc.​
+                            The class declaration itself was taking hardly any memory. But once you initialize the class, or say create an instance of the class, it needs memory to exist. ​
+                        </RadzenText>
+                    </RadzenCard>
+                </RadzenCard>
+            </RadzenStepsItem>
+            <RadzenStepsItem>
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                    <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                        <RadzenImage Path="./images/basics002.jpg" Style="width: 50rem;" />
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.Body1">
+                            Certain terms are confusing, like <mark>Class</mark>​, <mark>business object</mark>, <mark>entity</mark> etc.
+                            <br/>
+                            <br/>
+                            We saw how a <mark>class</mark> and <mark>object</mark> is different.
+                            <br/>
+                            Now the term <mark>business object</mark> is used interchangeably with <mark>class</mark>. 
+                            <mark>Business object</mark> is not an <mark>object</mark> in OOP terms. It means the same as a <mark>class</mark>.​
+                            Anything from the real world that is significant enough to be represented as an class in our solution is referred an <mark>entity</mark>. 
+                            So the word <mark>entity</mark> is used interchangeably with <mark>class</mark>.
+                            <br/>
+                            <br/>
+                            <mark>OOP​ - Object Oriented Programming</mark> is your bible for programming.
+                            <br/>
+                            It is an approach to design and build applications that are:​
+                            <br/>
+                            -flexible
+                            <br/>
+                            -natural​
+                            <br/>
+                            -well-crafted​
+                            <br/>
+                            -testable​
+                            <br/>
+                            <br/>
+                            By focusing on objects that interact cleanly with one another we make sure our design is good.​
+                            This is an iterative process. We gone round and round over these sets, each time making our design better.
+                        </RadzenText>
+                    </RadzenCard>
+                </RadzenCard>
+            </RadzenStepsItem>
+            <RadzenStepsItem>
+
+            </RadzenStepsItem>
+            <RadzenStepsItem>
+
+            </RadzenStepsItem>
+            <RadzenStepsItem>
+
+            </RadzenStepsItem>
+        </Steps>
+    </RadzenSteps>
+    <div class="col-sm-12 col-md-6 col-lg-6" id="imgContainer">
+
+    </div>
+
+</div>
