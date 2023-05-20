@@ -8,48 +8,7 @@
 </div>
 
 <div class="position-static @NavMenuCssClass" @onclick="ToggleNavMenu">
-   @* <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3" @onclick:stopPropagation="true">
-            <a class="nav-link" @onclick="ToggleChapters">
-                <span class="oi oi-book" aria-hidden="true"></span> Chapters
-            </a>
-            @if (chaptersExpanded)
-            {
-                <div class="nav-item px-3">
-                    <a class="nav-link" href="problemstatement">
-                        Problem
-                    </a>
-                </div>
-                <div class="nav-item px-3">
-                    <a class="nav-link" href="#">
-                        Prerequisites
-                    </a>
-                </div>
-                <div class="nav-item px-3">
-                    <a class="nav-link" href="#">
-                        Solution thinking
-                    </a>
-                </div>
-            }
-            
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Stories
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Reach me
-            </NavLink>
-        </div>
-        
-    </nav>*@
+  
     <RadzenPanelMenu Click="OnParentClicked" Style="width:250px" Multiple="true">
         <RadzenPanelMenuItem Text="Home" Icon="home">
             <RadzenPanelMenuItem Text="Hello, World" Path="" Icon="explore"></RadzenPanelMenuItem>
@@ -57,20 +16,20 @@
         </RadzenPanelMenuItem>
         <RadzenPanelMenuItem Text=".net curry" Icon="payment">
             <RadzenPanelMenuItem Text="Main Ingredient" Path="ProblemStatement" Icon="book"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Basic Cooking" Path="textbox" Icon="check_circle"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Console Wala" Path="textarea" Icon="description"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="WPF Wala" Path="password" Icon="dashboard"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Web Wala" Path="numeric" Icon="open_in_browser"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Maui Wala" Path="datepicker" Icon="andriod"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Basics" Path="basics" Icon="check_circle"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Console" Path="" Icon="description"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Desktop" Path="" Icon="dashboard"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Web" Path="" Icon="open_in_browser"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Mobile" Path="" Icon="android" ></RadzenPanelMenuItem>
         </RadzenPanelMenuItem>
         <RadzenPanelMenuItem Text="Miscellaneous" Icon="save">
-            <RadzenPanelMenuItem Text="Hi there" Path="datagrid" Icon="grid_on"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Hi there" Path="" Icon="grid_on"></RadzenPanelMenuItem>
         </RadzenPanelMenuItem>
         <RadzenPanelMenuItem Text="Containers" Icon="account_box">
-            <RadzenPanelMenuItem Text="Tabs" Path="tabs" Icon="tab"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Panel" Path="panel" Icon="content_paste"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Fieldset" Path="fieldset" Icon="account_balance_wallet"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Card" Path="card" Icon="line_style"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Tabs" Path="" Icon="tab"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Panel" Path="" Icon="content_paste"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Fieldset" Path="" Icon="account_balance_wallet"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Card" Path="" Icon="line_style"></RadzenPanelMenuItem>
         </RadzenPanelMenuItem>
         <RadzenPanelMenuItem Text="More">
             <RadzenPanelMenuItem Click="OnChildClicked" Text="Item1"></RadzenPanelMenuItem>
