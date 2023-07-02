@@ -7,7 +7,7 @@
             <RadzenStepsItem >
                 <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
                     <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
-                        <RadzenImage Path="./images/basics001.jpg" Style="width: 50rem;" />
+                        <RadzenImage Path="./images/basics001.jpg" Style="width: 100%;" />
                     </RadzenStack>
                     <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
                         <RadzenText TextStyle="TextStyle.Body1">
@@ -32,7 +32,7 @@
             <RadzenStepsItem>
                 <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
                     <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
-                        <RadzenImage Path="./images/basics002.jpg" Style="width: 50rem;" />
+                        <RadzenImage Path="./images/basics002.jpg" Style="width: 100%;" />
                     </RadzenStack>
                     <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
                         <RadzenText TextStyle="TextStyle.Body1">
@@ -82,10 +82,76 @@
                 </RadzenCard>
             </RadzenStepsItem>
             <RadzenStepsItem>
-
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                    <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                        <RadzenImage Path="./images/basics004.jpg" Style="max-width: 100%;" />
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.Body1">
+                            Here we have one liner request from our business owner. We need to analyse this, get missing information and re-word it to be more precise. Finally get it verified with the business owner. ​
+                            <br/>
+                            <mark>It’s a application to manage orders in a restaurant.​</mark>
+                            <br/>
+                            Who is the user of the application. Are there multiple users? What is the output expected? 
+                            Do we need payment facility? The scope is endless, but for simplicity sake, we will stick to a bare minimum requirement.​ 
+                            <br/>
+                            <br/>
+                            Using our application, a customer should be able to see the restaurant menu, select dishes in the menu to make an order. 
+                            The application will calculate the total amount payable by the customer.
+                        </RadzenText>
+                    </RadzenCard>
+                </RadzenCard>
             </RadzenStepsItem>
             <RadzenStepsItem>
-
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                    <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                        <RadzenImage Path="./images/basics005.jpg" Style="max-width: 100%;" />
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.Body1">
+                            From the requirement, if we pull out the nouns, we will come up with these main entities. 
+                            <br/>
+                            <br/>
+                            It starts with a <mark>Customer</mark>. There is always a customer to whom the application is serving.​
+                            <br/>Then the first step is to display the <mark>Menu</mark>. So here Menu is an important entity and it consists of all the Dishes available in the restaurant. So <mark>Dish</mark> is also an import entity for us.
+                            <br/>
+                            <br/>
+                            Then the customer is going to place an order eventually, so <mark>Order</mark> is also an entity to be considered. It will contain a number of order-items, and each <mark>order-item</mark> will be consisting of a dish and the quantity of it.​
+                            <br/>
+                            <br/>
+                            Let me be very clear, this is not the only way to solve this problem, perhaps not even the best way. It is just one way of doing it. 
+                        </RadzenText>
+                    </RadzenCard>
+                </RadzenCard>
+            </RadzenStepsItem>
+             <RadzenStepsItem>
+                <RadzenCard Class="rz-my-12 rz-mx-auto" Style="max-width: 1020px">
+                    <RadzenStack AlignItems="AlignItems.Center" Class="rz-mx-auto rz-my-12">
+                        <RadzenImage Path="./images/basics006.jpg" Style="max-width: 100%;" />
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.Body1">
+                            You can see what properties we want our entities to have. A customer needs to have a name, e-mail address and a phone number. Pretty basic right. Let us assume we have a database managing our data, so let us have some basic behaviours for our customer entity like, Save - it will save the customer into the database, Retrive - it will fetch customer data from the database and Validate - will check if the customer data is valid or not. These basic behviours are common to most entities. 
+                            <br/>
+                            <br/>
+                            Save and Retrive are related to data access and should be ideally in a separe data access layer. We will move them eventually. But at a high level you need to understand the basic behivour we normally associate with any entities. 
+                            <br/>
+                            <br/>
+                            Order class can hold multiple orderitems. And each orderitem will hold one dish and how much quantity it is ordered.​​
+                            Notice we mentioned OrderItems in the class order. That means it will be a list(or array or collection) of OrderItem instances.​​
+                            <br/>
+                            <br/>
+                            We also need to look at the effect of time on our model. With time, what can change, and will it cause our model to be inconsistent. ​
+                            Imagine the price of a dish gets increased in future, so that change will reflect on an older Order because it is referred to through orderItem. ​
+                            <br/>
+                            So what you ordered for Rs100 two months ago, appears as Rs150 now, which is wrong. We could introduce a new property purchased price inside OrderItem which is independent of Dish to save the price of the dish at the time of ordering. Lets not bring in that complexity now.​
+                            <br/>
+                            <br/>
+                            Next, Abstraction. Do you see it? It is once of the fundamental principles of OOP. It is a way of thinking more that a programming technique. ​
+                            Lets look at our customer class. In reality a customer can have so many properties/features. Like a Joe is a customer, he has a wife, two kids, a car, brown hair and crooked nose. But we don’t really care of those properties in our use case. All we care is his name, email and phone number. So in practice, we have abstracted out the unwanted details and focused on the important details. And that is what abstraction is all about.
+                        </RadzenText>
+                    </RadzenCard>
+                </RadzenCard>
             </RadzenStepsItem>
         </Steps>
     </RadzenSteps>
